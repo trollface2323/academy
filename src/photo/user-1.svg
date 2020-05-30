@@ -1,0 +1,11 @@
+<svg id="user" xmlns="http://www.w3.org/2000/svg" width="24.244" height="28.842" viewBox="0 0 24.244 28.842">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #919196;
+      }
+    </style>
+  </defs>
+  <ellipse id="Ellipse_22" data-name="Ellipse 22" class="cls-1" cx="6.688" cy="6.688" rx="6.688" ry="6.688" transform="translate(5.434)"/>
+  <path id="Path_23" data-name="Path 23" class="cls-1" d="M32.747,150a12.122,12.122,0,0,0-12.122,12.122H44.869A12.122,12.122,0,0,0,32.747,150Z" transform="translate(-20.625 -133.28)"/>
+</svg>
