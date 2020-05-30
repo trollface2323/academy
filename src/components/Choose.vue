@@ -156,11 +156,14 @@
         text-align: left;
 
         &__photo {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 1064px;
-            height: 780px;
+            &:first-child{
+                position: absolute;
+                top: -76px;
+                right: 0;
+                width: 1064px;
+                height: 780px;
+
+            }
 
             & img:last-child {
                 position: absolute;
