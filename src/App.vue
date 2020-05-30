@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <Choose></Choose>
+<!--    <Reg></Reg>-->
   </div>
 </template>
 
 <script>
 
   import Choose from "@/components/Choose";
+  // import Reg from "@/components/Reg";
 
 export default {
   name: 'App',
   components:{
-    Choose
+    Choose,
+    // Reg
   }
 }
 </script>

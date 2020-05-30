@@ -4,7 +4,7 @@
             <div class="header__photo">
                 <img src="../photo/Path 21.svg" alt="">
                 <img src="../photo/Ellipse 1.svg" alt="">
-            </div>  <!--желтая хрень в углу edir-->
+            </div>
 
             <div class="header__icon">
                 <img src="../photo/Group 34.svg" alt="">
@@ -17,19 +17,12 @@
         </section>
 
         <section class="choose">
-            <!--            <div class="choose__body">-->
             <div class="choose__title">Выберите направление</div>
-
             <div class="choose__box">
-<!--                todo при наведении на карточку, она немного смещается вбок,
-                      адекватно не смог решить эту проблему, при нажатии цвет тоже не
-                      фиксируется
-                      -->
                 <div class="choose__card">
                     <input type="checkbox" id="1" class="checkbox">
                     <label for="1">
                         <div class="choose__box-photo">
-
                             <img src="../photo/Group 39.svg" alt="" class="">
                         </div>
                         <span>Театральное искусство</span>
@@ -67,23 +60,77 @@
                 </div>
             </div>
         </section>
-        <section class="reg">
-            <div class="reg__title">Театральная искусство</div>
-            <div class="reg__body">
-                <div class="reg__item">
-                    <div class="reg__item-title">Какая-то сфера</div>
-                    <div class="reg__item-btn">
-                        <a href="#">Регистрация</a>
+        <section class="course">
+            <div class="course__title">Театральная искусство</div>
+            <div class="course__body">
+                <div class="course__item">
+                    <div class="course__item-title">Какая-то сфера</div>
+                    <div class="course__item-btn">
+                        <a href="#" data-toggle="modal" data-target="#reg">Регистрация</a>
                     </div>
                 </div>
-                <div class="reg__item">
-                    <div class="reg__item-title">Какая-то сфера2</div>
-                    <div class="reg__item-btn">
+                <div class="course__item">
+                    <div class="course__item-title">Какая-то сфера2</div>
+                    <div class="course__item-btn">
                         <a href="#">Регистрация</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="reg" data-backdrop="static" tabindex="-1" role="dialog"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+
+                        <div class="reg__btn">
+                            <button type="submit"><span>Регистарция</span></button>
+                        </div>
+
+                        <div class="reg__title">Регистрация</div>
+                        <img src="../photo/user.svg" alt="" class="icons__item">
+                        <div class="reg__body">
+                            <div class="reg__form">
+                                <form action="">
+                                    <input type="text" placeholder="ФИО ребенка" class="reg__form-item"><img
+                                        src="../photo/user.svg" alt="" class="icons__item">
+                                    <input type="number" placeholder="Возраст ребенка" class="reg__form-item"><img
+                                        src="../photo/user.svg" alt="" class="icons__item">
+                                    <input type="text" placeholder="ФИО родителя" class="reg__form-item"><img
+                                        src="../photo/user.svg" alt="" class="icons__item">
+                                    <input type="number" placeholder="Телефон" class="reg__form-item"><img
+                                        src="../photo/user.svg" alt="" class="icons__item"> <input type="text"
+                                                                                                   placeholder="Почта"
+                                                                                                   class="reg__form-item">
+                                    <div class="agree d-flex">
+                                        <input type="checkbox" class="reg__checkbox" id="yes"><label for="yes"><span> согласие на обработку персональных данных</span></label>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="reg__text">
+                                <div class="reg__text-title">Мультимедийный театр «Сфера»</div>
+                                <div class="reg__text-sub-title">Мультимедийный Театр «Сфера» - это видео перформанс
+                                    будущего, который открывает безграничные возможности в представлениях, включает в
+                                    себя взаимодействие реальных актёров, находящихся в зоне сценического пространства с
+                                    графическими объектами, что несомненно потрясает даже самых искушенных зрителей.
+                                    Отличительная особенность программы заключается в разнообразии содержания программы,
+                                    что позволяет создавать собственные проекты, театральные представления, перформансы,
+                                    научно-популярные фильмы и другие тематические мероприятия.
+                                </div>
+                                <div class="reg__text-footer">􀎫 Наб.реки Малой Невки, д.1А</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -95,9 +142,12 @@
 
 <style scoped lang="scss">
 
-    /*@import url(../css/stylesheet.css); скачал файлы со шрифтами, пробовал их сюда добавить, не работает*/
+    /*@import url(../css/stylesheet.css);  todo скачал файлы со шрифтами, пробовал их сюда добавить, не работает*/
 
     .main {
+        position: relative;
+        width: 1920px;
+        margin: 0 auto;
         padding: 0 150px;
         font-family: 'Muller', sans-serif;
     }
@@ -158,7 +208,7 @@
         }
 
 
-        &__card{
+        &__card {
             display: inline-block;
             box-shadow: 0 10px 20px #00000029;
             width: 378px;
@@ -167,7 +217,8 @@
             text-align: center;
             border-radius: 20px;
             margin: 58px 29px 60px 0;
-            &:hover{
+
+            &:hover {
                 border: red solid 2px;
                 margin-top: 1px;
 
@@ -237,18 +288,22 @@
             }
         }
     }
-    .reg{
+
+    .course {
         color: #393939;
-        &__title{
+
+        &__title {
             text-align: left;
             font-size: 50px;
             font-weight: 600;
             margin-bottom: 30px;
         }
-        &__body{
+
+        &__body {
 
         }
-        &__item{
+
+        &__item {
             display: flex;
             align-items: center;
             text-align: left;
@@ -257,11 +312,13 @@
             margin-bottom: 30px;
             height: 150px;
             padding-left: 52px;
-            &-title{
+
+            &-title {
                 font-size: 40px;
-                
+
             }
-            &-btn{
+
+            &-btn {
                 font-size: 31px;
                 background: #FFA358 0 0 no-repeat padding-box;
                 box-shadow: 0 3px 6px #00000029;
@@ -269,12 +326,138 @@
                 padding: 25px 19px;
                 margin: 0 18px 0 auto;
 
-                & a{
+                & a {
                     text-decoration: none;
                     color: #fff;
                 }
             }
         }
+    }
+
+    .reg {
+
+        /*color: #393939;*/
+        /*box-shadow: 0 10px 20px #00000029;*/
+        /*padding-left: 45px;*/
+        /*height: 847px;*/
+
+        &__btn {
+            position: absolute;
+            left: 50%;
+            bottom: -280px;
+            box-shadow: 0 3px 6px #00000029;
+            z-index: 2;
+            border-radius: 20px;
+
+
+            & button {
+                background: #F8DD69;
+                border-radius: 20px;
+                width: 260px;
+                height: 80px;
+
+
+            }
+
+            & span {
+                font-size: 31px;
+                color: #393939;
+                padding: 25px 35px;
+            }
+        }
+
+        &__title {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 112px;
+            padding-top: 45px;
+        }
+
+        &__body {
+            display: flex;
+        }
+
+        &__form {
+            &-item {
+                display: block;
+                border: none;
+                border-bottom: 1px gray solid;
+                margin-bottom: 60px;
+                font-size: 28px;
+                width: 610px;
+            }
+        }
+
+        &__text {
+            padding-left: 150px;
+            width: 605px;
+
+            &-title {
+                white-space: nowrap;
+                text-align: left;
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 40px;
+            }
+
+            &-sub-title {
+                text-align: left;
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 50px;
+                line-height: 1em;
+                width: 605px;
+            }
+
+            &-footer {
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+
+        .checkbox {
+            width: 30px;
+            height: 30px;
+            font-size: 22px;
+            margin-right: 20px;
+        }
+    }
+
+    .agree {
+
+        & input{
+            width: 30px;
+            height: 30px;
+        }
+        & span{
+            margin-left: 15px;
+            font-size: 22px;
+        }
+
+    }
+
+
+    .icons__item {
+        position: absolute;
+        left: 630px;
+
+    }
+    .close{
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        font-size: 40px;
+        z-index: 2;
+    }
+
+    .modal-dialog {
+        max-width: 87%;
+
+    }
+
+    .modal-body {
+        padding-left: 45px;
+        text-align: left;
     }
 
 
