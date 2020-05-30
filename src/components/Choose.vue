@@ -45,14 +45,6 @@
                     </label>
                 </div>
             </div>
-            <!--                <div class="choose__icons">-->
-            <!--                    <div class="choose__icons-item">-->
-            <!--                        <div class="choose__icons-item-photo">-->
-            <!--                            <img src="../photo/Group 39.svg" alt="">-->
-            <!--                        </div>-->
-            <!--                        <div class="choose__icons-item-text">Театральное искусство</div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
             <div class="choose__old">
                 <div class="choose__old-title">Выберите возраст</div>
                 <div class="choose__old-number">
@@ -74,7 +66,23 @@
 
                 </div>
             </div>
-            <!--            </div>-->
+        </section>
+        <section class="reg">
+            <div class="reg__title">Театральная искусство</div>
+            <div class="reg__body">
+                <div class="reg__item">
+                    <div class="reg__item-title">Какая-то сфера</div>
+                    <div class="reg__item-btn">
+                        <a href="#">Регистрация</a>
+                    </div>
+                </div>
+                <div class="reg__item">
+                    <div class="reg__item-title">Какая-то сфера2</div>
+                    <div class="reg__item-btn">
+                        <a href="#">Регистрация</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </template>
@@ -99,8 +107,6 @@
 
         &__photo {
             position: absolute;
-            /*<!--top: -25px;-->*/
-            /*<!--right: -46px;-->*/
             top: 0;
             right: 0;
             width: 1064px;
@@ -143,9 +149,6 @@
     }
 
     .choose {
-        /*&__body {*/
-
-        /*}*/
 
         &__title {
             font-size: 80px;
@@ -197,7 +200,7 @@
             }
 
             &-number {
-                margin-top: 37px;
+                margin: 37px 0 101px 0;
                 font-size: 55px;
 
                 & span {
@@ -234,6 +237,45 @@
             }
         }
     }
-    
+    .reg{
+        color: #393939;
+        &__title{
+            text-align: left;
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        &__body{
+
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 5px 20px #00000029;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            height: 150px;
+            padding-left: 52px;
+            &-title{
+                font-size: 40px;
+                
+            }
+            &-btn{
+                font-size: 31px;
+                background: #FFA358 0 0 no-repeat padding-box;
+                box-shadow: 0 3px 6px #00000029;
+                border-radius: 20px;
+                padding: 25px 19px;
+                margin: 0 18px 0 auto;
+
+                & a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
 
 </style>
